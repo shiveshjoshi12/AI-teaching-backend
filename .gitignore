@@ -1,0 +1,226 @@
+﻿# ================================
+# .NET / C# GITIGNORE
+# ================================
+
+## Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+## Visual Studio cache/options
+.vs/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## Rider
+.idea/
+*.sln.iml
+
+## User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+## .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## Publish profiles
+PublishProfiles/
+*.pubxml
+*.publishproj
+
+# ================================
+# SECRETS & SENSITIVE DATA
+# ================================
+
+## ⚠️ CRITICAL - Never commit these!
+appsettings.json
+appsettings.*.json
+appsettings.Development.json
+appsettings.Production.json
+secrets.json
+*.env
+.env
+.env.local
+.env.production
+
+## Connection Strings (if separate file)
+connectionstrings.json
+
+## API Keys (if separate files)
+apikeys.json
+*.key
+*.pem
+
+# ================================
+# DATABASE & MIGRATION
+# ================================
+
+## Entity Framework
+*.mdf
+*.ldf
+*.ndf
+Migrations/
+
+## SQLite
+*.db
+*.sqlite
+*.sqlite3
+
+# ================================
+# PACKAGES
+# ================================
+
+## NuGet
+*.nupkg
+*.snupkg
+**/packages/*
+!**/packages/build/
+*.nuget.props
+*.nuget.targets
+
+## Paket
+.paket/paket.exe
+paket-files/
+
+# ================================
+# TEST RESULTS
+# ================================
+
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.trx
+*.coverage
+*.coveragexml
+
+# ================================
+# TEMPORARY FILES
+# ================================
+
+## Temp folders
+[Tt]emp/
+[Tt]mp/
+
+## Backup files
+*.bak
+*.backup
+*~
+*.swp
+*.swo
+
+## OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ================================
+# LOGS & DIAGNOSTICS
+# ================================
+
+*.log
+*.logs
+logs/
+*.stackdump
+
+# ================================
+# DOCKER (if using)
+# ================================
+
+## Docker
+docker-compose.override.yml
+.dockerignore
+
+# ================================
+# SPECIFIC TO YOUR PROJECT
+# ================================
+
+## Uploaded files (if stored locally)
+wwwroot/uploads/
+Uploads/
+Documents/
+Files/
+
+## Qdrant data (if stored locally)
+qdrant_data/
+qdrant_storage/
+
+## PostgreSQL data (if stored locally)
+postgres_data/
+pg_data/
+
+# ================================
+# IDE & EDITOR
+# ================================
+
+## Visual Studio Code
+.vscode/
+*.code-workspace
+
+## JetBrains Rider
+.idea/
+*.sln.iml
+
+## Visual Studio
+.vs/
+*.suo
+*.user
+
+## Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# ================================
+# MISC
+# ================================
+
+## Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+## Folder config file
+Desktop.ini
+
+## Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+## Mac
+.DS_Store
+.AppleDouble
+.LSOverride
+
+## Linux
+*~
+.directory
+.Trash-*
