@@ -1,24 +1,22 @@
 # Build stage
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-WORKDIR /app
+WORKDIR /source
 
-# Copy csproj and restore dependencies
-COPY *.csproj ./
-RUN dotnet restore
+# Copy csproj and restore (use exact name with spaces)
+COPY "AI-driven teaching platform.csproj" .
+RUN dotnet restore "AI-driven teaching platform.csproj"
 
-# Copy everything else and build
-COPY . ./
-RUN dotnet publish -c Release -o out
+# Copy everything and publish
+COPY . .
+RUN dotnet publish "AI-driven teaching platform.csproj" -c Release -o /app
 
-# Runtime stage
+# Runtime image
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
+COPY --from=build /app .
 
-# Copy from build stage
-COPY --from=build /app/out .
-
-# Expose port (Railway sets PORT env variable)
+# Railway provides PORT env variable
 ENV ASPNETCORE_URLS=http://+:$PORT
 
-# Start the app
-ENTRYPOINT ["dotnet", "AI-driven-teaching-platform.dll"]
+# ✅ Use exact DLL name with spaces
+ENTRYPOINT ["dotnet", "AI-driven teaching platform.dll"]
